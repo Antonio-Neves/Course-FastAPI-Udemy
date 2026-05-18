@@ -11,3 +11,9 @@ BOOKS = [
     {'title': 'Title Five', 'author': 'Author Five', 'category': 'math'},
     {'title': 'Title Six', 'author': 'Author Two', 'category': 'math'}
 ]
+
+
+@app.get('/endpoint_one')
+async def first_api():
+
+    return {'message': 'Obrigado meu Deus'}
