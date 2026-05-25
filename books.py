@@ -17,4 +17,3 @@ BOOKS = [
 async def first_api():
 
     return {'message': 'Obrigado meu Deus'}
-
