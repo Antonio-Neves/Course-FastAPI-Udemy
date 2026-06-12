@@ -13,7 +13,18 @@ BOOKS = [
 ]
 
 
-@app.get('/endpoint_one')
-async def first_api():
+@app.get('/books')
+async def read_all_books():
 
-    return {'message': 'Obrigado meu Deus'}
+    return BOOKS
+
+
+@app.get("/books/{title}")
+async def read_book(title: str):
+
+    for book in BOOKS:
+
+        if book.get('title').casefold() == title.casefold():
+            return book
+
+    return None
